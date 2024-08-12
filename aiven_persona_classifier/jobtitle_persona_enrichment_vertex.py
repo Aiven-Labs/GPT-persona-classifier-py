@@ -13,11 +13,13 @@ app = typer.Typer()
 
 load_dotenv()
 
-project_id = os.getenv("VERTEX_PROJECT_ID")
 
-vertexai.init(project=project_id, location="us-central1")
+def vertex_init():
+    project_id = os.getenv("VERTEX_PROJECT_ID")
 
-model = GenerativeModel(model_name="gemini-1.5-flash-001")
+    vertexai.init(project=project_id, location="us-central1")
+
+    model = GenerativeModel(model_name="gemini-1.5-flash-001")
 
 
 # This is only useful to run with non-workplace Google configurations
@@ -234,4 +236,4 @@ def main():
 
 
 if __name__ == "__main__":
-    app.run(main)
+    app()
