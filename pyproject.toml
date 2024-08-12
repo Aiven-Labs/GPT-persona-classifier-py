@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aiven-persona-classifier"
+description = "A tool for classifying personas using LLMs"
+version = "2024.0.1"
+dependencies = [
+  "pandas",
+  "typer",
+  "rich"
+]
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.optional-dependencies]
+  dev = [
+    "ruff",
+    "pip-tools",
+    "pytest",
+    "pytest-cov",
+    "nox"
+  ]
+

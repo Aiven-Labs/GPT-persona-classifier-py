@@ -65,8 +65,11 @@ python -m venv .venv # .venv is the name of the virtual environment
 - [activate the virtual environment](https://docs.python.org/3/library/venv.html) (instructions vary by OS)
 - Install the dependencies
 
+Because you are developing locally, you will need to install the dependencies AND the extra developer dependencies.
+Do this using `pip`.
+
 ```sh
-python -m pip install -r requirements.txt
+python -m pip install -r requirements-dev.txt
 ```
 
 Your environment is now set up and you can start developing.
