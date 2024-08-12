@@ -1,0 +1,2 @@
+MD041: false # First line in file should be a top level header set to false
+MD013: false # Line length set to false
