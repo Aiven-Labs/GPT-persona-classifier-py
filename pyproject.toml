@@ -6,13 +6,16 @@ build-backend = "setuptools.build_meta"
 name = "aiven-persona-classifier"
 description = "A tool for classifying personas using LLMs"
 version = "2024.0.1"
+requires-python = ">=3.10"
+readme = "README.md"
 dependencies = [
   "pandas",
   "typer",
-  "rich"
+  "rich",
+  "python-dotenv",
+  "tqdm",
+  "vertexai",
 ]
-requires-python = ">=3.10"
-readme = "README.md"
 
 [project.optional-dependencies]
   dev = [

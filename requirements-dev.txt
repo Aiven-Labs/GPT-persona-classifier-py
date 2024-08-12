@@ -4,10 +4,18 @@
 #
 #    pip-compile --extra=dev --output-file=requirements-dev.txt
 #
+annotated-types==0.7.0
+    # via pydantic
 argcomplete==3.5.0
     # via nox
 build==1.2.1
     # via pip-tools
+cachetools==5.4.0
+    # via google-auth
+certifi==2024.7.4
+    # via requests
+charset-normalizer==3.3.2
+    # via requests
 click==8.1.7
     # via
     #   pip-tools
@@ -18,8 +26,62 @@ coverage[toml]==7.6.1
     # via pytest-cov
 distlib==0.3.8
     # via virtualenv
+docstring-parser==0.16
+    # via google-cloud-aiplatform
 filelock==3.15.4
     # via virtualenv
+google-api-core[grpc]==2.19.1
+    # via
+    #   google-cloud-aiplatform
+    #   google-cloud-bigquery
+    #   google-cloud-core
+    #   google-cloud-resource-manager
+    #   google-cloud-storage
+google-auth==2.33.0
+    # via
+    #   google-api-core
+    #   google-cloud-aiplatform
+    #   google-cloud-bigquery
+    #   google-cloud-core
+    #   google-cloud-resource-manager
+    #   google-cloud-storage
+google-cloud-aiplatform[all]==1.60.0
+    # via vertexai
+google-cloud-bigquery==3.25.0
+    # via google-cloud-aiplatform
+google-cloud-core==2.4.1
+    # via
+    #   google-cloud-bigquery
+    #   google-cloud-storage
+google-cloud-resource-manager==1.12.5
+    # via google-cloud-aiplatform
+google-cloud-storage==2.18.2
+    # via google-cloud-aiplatform
+google-crc32c==1.5.0
+    # via
+    #   google-cloud-storage
+    #   google-resumable-media
+google-resumable-media==2.7.2
+    # via
+    #   google-cloud-bigquery
+    #   google-cloud-storage
+googleapis-common-protos[grpc]==1.63.2
+    # via
+    #   google-api-core
+    #   grpc-google-iam-v1
+    #   grpcio-status
+grpc-google-iam-v1==0.13.1
+    # via google-cloud-resource-manager
+grpcio==1.65.4
+    # via
+    #   google-api-core
+    #   googleapis-common-protos
+    #   grpc-google-iam-v1
+    #   grpcio-status
+grpcio-status==1.62.3
+    # via google-api-core
+idna==3.7
+    # via requests
 iniconfig==2.0.0
     # via pytest
 markdown-it-py==3.0.0
@@ -29,10 +91,14 @@ mdurl==0.1.2
 nox==2024.4.15
     # via aiven-persona-classifier (pyproject.toml)
 numpy==2.0.1
-    # via pandas
+    # via
+    #   pandas
+    #   shapely
 packaging==24.1
     # via
     #   build
+    #   google-cloud-aiplatform
+    #   google-cloud-bigquery
     #   nox
     #   pytest
 pandas==2.2.2
@@ -43,6 +109,30 @@ platformdirs==4.2.2
     # via virtualenv
 pluggy==1.5.0
     # via pytest
+proto-plus==1.24.0
+    # via
+    #   google-api-core
+    #   google-cloud-aiplatform
+    #   google-cloud-resource-manager
+protobuf==4.25.4
+    # via
+    #   google-api-core
+    #   google-cloud-aiplatform
+    #   google-cloud-resource-manager
+    #   googleapis-common-protos
+    #   grpc-google-iam-v1
+    #   grpcio-status
+    #   proto-plus
+pyasn1==0.6.0
+    # via
+    #   pyasn1-modules
+    #   rsa
+pyasn1-modules==0.4.0
+    # via google-auth
+pydantic==2.8.2
+    # via google-cloud-aiplatform
+pydantic-core==2.20.1
+    # via pydantic
 pygments==2.18.0
     # via rich
 pyproject-hooks==1.1.0
@@ -56,25 +146,47 @@ pytest==8.3.2
 pytest-cov==5.0.0
     # via aiven-persona-classifier (pyproject.toml)
 python-dateutil==2.9.0.post0
-    # via pandas
+    # via
+    #   google-cloud-bigquery
+    #   pandas
+python-dotenv==1.0.1
+    # via aiven-persona-classifier (pyproject.toml)
 pytz==2024.1
     # via pandas
+requests==2.32.3
+    # via
+    #   google-api-core
+    #   google-cloud-bigquery
+    #   google-cloud-storage
 rich==13.7.1
     # via
     #   aiven-persona-classifier (pyproject.toml)
     #   typer
+rsa==4.9
+    # via google-auth
 ruff==0.5.7
     # via aiven-persona-classifier (pyproject.toml)
+shapely==2.0.5
+    # via google-cloud-aiplatform
 shellingham==1.5.4
     # via typer
 six==1.16.0
     # via python-dateutil
+tqdm==4.66.5
+    # via aiven-persona-classifier (pyproject.toml)
 typer==0.12.3
     # via aiven-persona-classifier (pyproject.toml)
 typing-extensions==4.12.2
-    # via typer
+    # via
+    #   pydantic
+    #   pydantic-core
+    #   typer
 tzdata==2024.1
     # via pandas
+urllib3==2.2.2
+    # via requests
+vertexai==1.60.0
+    # via aiven-persona-classifier (pyproject.toml)
 virtualenv==20.26.3
     # via nox
 wheel==0.44.0
