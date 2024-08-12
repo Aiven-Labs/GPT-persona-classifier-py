@@ -12,6 +12,7 @@ dependencies = [
   "pandas",
   "typer",
   "rich",
+  "python-dotenv",
   "tqdm",
   "vertexai",
 ]
