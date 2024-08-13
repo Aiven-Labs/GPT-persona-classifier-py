@@ -1,6 +1,6 @@
 # GPT-persona-classifier-py
 
-This project allows you to classify a dataset of contacts into personsa based on their job-title.
+This project allows you to classify a dataset of contacts into personas based on their job-title.
 
 ## Dependencies
 
